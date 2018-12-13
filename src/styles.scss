@@ -1,3 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+//
+// Customized Material Theme
+//
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/theming';
+
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+
+@include mat-core();
+
+$primary: mat-palette($mat-lime, 500);
+$accent:  mat-palette($mat-lime, 500, A200, A400);
+$warn:    mat-palette($mat-red, 500);
+
+$config: mat-typography-config();
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+body {
+  font-family: mat-font-family($config);
+  font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+
+/*
+ * NICIFY: Demo appearance
+ */
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.mat-toolbar {
+  background: #f19f45;
+  color: white;
+  span { margin-right: 2rem; }
+  mat-icon {
+    cursor: pointer;
+    font-size: 1.6em;
+    transform: translateY(3px);
+  }
+  h1 { font-size: 1.2em; }
+}
+
+mat-sidenav { width: 30vw; }
+
+footer {
+  width: 100%;
+  height: 50px;
+  background: #f2803c;
+  color: white;
+  h2 {
+    font-size: 1.4em;
+    padding: 12px 0 10px 1.4em;
+    margin: 0;
+  }
+}
+
+.info { padding: 2vh 1.7vw; }
+
+.img-bg {
+  //background-image: url('assets/thecodecampus_branding.svg');
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  //background-position: center;
+  //background-size: 35% auto;
+
+  background: no-repeat center / 35% url("assets/thecodecampus_branding.svg");
+}
+// TODO: Background gradient :)
