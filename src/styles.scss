@@ -50,6 +50,7 @@ body {
 }
 
 mat-sidenav { width: 30vw; }
+mat-list-item { cursor: pointer; }
 
 footer {
   width: 100%;
@@ -64,14 +65,15 @@ footer {
 }
 
 .info { padding: 2vh 1.7vw; }
+.home {
+  margin: 1.7vw 0 0;
+  button.color-font { color: #4d4daa; }
+}
+.info-card {
+  margin: 1vh 1.7vw;
+  color: #7b2f94;
+}
 
 .img-bg {
-  //background-image: url('assets/thecodecampus_branding.svg');
-  //background-repeat: no-repeat;
-  //background-attachment: fixed;
-  //background-position: center;
-  //background-size: 35% auto;
-
-  background: no-repeat center / 35% url("assets/thecodecampus_branding.svg");
+  background: no-repeat center 65% / 35% url("assets/thecodecampus_branding.svg");
 }
-// TODO: Background gradient :)

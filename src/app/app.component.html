@@ -2,9 +2,13 @@
 
   <mat-sidenav #sidenav over>
     <mat-list>
-      <mat-list-item><mat-icon>code</mat-icon>&emsp;One</mat-list-item>
-      <mat-list-item><mat-icon>code</mat-icon>&emsp;Two</mat-list-item>
-      <mat-list-item><mat-icon>code</mat-icon>&emsp;Three</mat-list-item>
+      <mat-list-item
+        *ngFor="let route of routes"
+        [routerLink]="route.path"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon>code</mat-icon>&emsp;{{route.name}}
+      </mat-list-item>
     </mat-list>
   </mat-sidenav>
 
@@ -22,7 +26,20 @@
     </mat-toolbar>
 
     <div class="info">
-      <button mat-button (click)="sidenav.open()">Open sidenav</button>
+      <button
+        mat-raised-button
+        (click)="sidenav.open()"
+      >Open sidenav</button>
+      <mat-card class="home">
+        <mat-card-title>Angular 7 and Material 2 Sticky Footer Example</mat-card-title>
+        <mat-card-content>
+          This demo was created with Material Version 7.1.1
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="color-font" mat-button>Source code at GitHub</button>
+          <button class="color-font" mat-button>Our blog post</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
 
     <main class="content">
@@ -36,33 +53,3 @@
   </mat-sidenav-content>
 
 </mat-sidenav-container>
-
-<!--<mat-sidenav-container class="all-wrap" fullscreen>-->
-  <!--<mat-sidenav #sidenav>-->
-    <!--<mat-list>-->
-      <!--<mat-list-item [routerLink]="['/']"> Foo</mat-list-item>-->
-      <!--<mat-list-item [routerLink]="['/bar']"> Bar</mat-list-item>-->
-    <!--</mat-list>-->
-  <!--</mat-sidenav>-->
-
-  <!--<div class="page-wrap">-->
-    <!--<header role="banner">-->
-      <!--<mat-toolbar color="primary">-->
-        <!--<button-->
-          <!--type="button"-->
-          <!--mat-icon-button-->
-          <!--(click)="sidenav.open()"-->
-          <!--title="Open sidenav">-->
-          <!--<mat-icon>menu</mat-icon>-->
-        <!--</button>-->
-        <!--Your Toolbar-->
-      <!--</mat-toolbar>-->
-    <!--</header>-->
-    <!--<main class="content">-->
-      <!--<router-outlet></router-outlet>-->
-    <!--</main>-->
-    <!--<footer>-->
-      <!--Your sticky footer with a variable height.-->
-    <!--</footer>-->
-  <!--</div>-->
-<!--</mat-sidenav-container>-->
