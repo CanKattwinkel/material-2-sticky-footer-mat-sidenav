@@ -1,27 +1,21 @@
-# DemoApp
+# DemoApp for Sticky Footer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This demo app is part of an article on [theCodeCampus Blog](https://www.thecodecampus.de/blog/).
+The article can be found [here](https://www.thecodecampus.de/blog/material-2-sticky-footer-mat-sidenav/).
+This example uses Angular 7 and Material 2.
 
-## Development server
+## What is it about?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+My guess is your using [Angular](https://angular.io/) in combination with 
+[Angular Material](https://material.angular.io/) and you need a 
+[sticky footer](https://css-tricks.com/couple-takes-sticky-footer/), which is under
+given circumstances not well documented. The footer supports a variable height.
 
-## Code scaffolding
+## Can you point me directly to the solution?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The most important file is `src/app/app.component.scss`.
+Here you can find the scss rules to support a sticky footer.
 
-## Build
+## Run the example
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Clone it and run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
