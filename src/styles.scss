@@ -54,14 +54,12 @@ mat-list-item { cursor: pointer; }
 
 footer {
   width: 100%;
-  height: 50px;
+  height: inherit;
   background: #f2803c;
   color: white;
-  h2 {
-    font-size: 1.4em;
-    padding: 12px 0 10px 1.4em;
-    margin: 0;
-  }
+  padding: .5rem 0 1rem 0;
+  > * { padding: 0 0 0 2rem; }
+  h2 { font-size: 1.4em; }
 }
 
 .info { padding: 2vh 1.7vw; }
