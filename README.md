@@ -2,7 +2,11 @@
 
 This simple demo app is part of an updated article on [theCodeCampus blog](https://www.thecodecampus.de/blog/).
 The article can be found [here](https://www.thecodecampus.de/blog/material-2-sticky-footer-mat-sidenav/).  
-This example uses Angular 7 and Material 2.
+This example uses Angular 7 and Material 2.  
+
+# Where can I find the running demo?
+
+Follow [this link](https://ch109.github.io/ng7-mat2-sticky-footer/).
 
 ## What is it about?
 
